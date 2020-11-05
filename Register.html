@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Raiden : Register</title>
+  <link rel="stylesheet" type="text/css" href="style2.css">
+</head>
+	
+<body onload="app.loadPage()">
+
+  <header>
+  <h1 style="color:gold">Raiden</h1>
+  <p style="color:yellow" >The Ordinary Random Guy</p>
+      <br><nav>
+  		<ul>
+  			<li><a href="Home.html">Home</a></li>
+  			<li><a href="#You've Already Registered">Register</a></li>
+  			<li><a href="Contact.html">Contact</a></li>
+		</ul>
+   </nav>
+  </header>
+
+		<aside>
+	<div class="aside">
+	<h1 style="color:gold">My Profile</h1>
+	<img class="foto" src="foto.jpg">
+	<p style="color:white;">Name : Raja Darwin</p>
+	<p style="color:white;">DOB : June, 12<sup>th</sup> 2001</p>
+	<p style="color:white;">Age : 19</p>
+	<p style="color:white;"> Currently studying Informatics</p>
+	
+	</div>
+	</aside>
+	<article>
+<div class="article1" style="background-color:#251A4E">
+  <div class="container" style="margin-bottom: 100px;">
+<h1 class="title" style="color:yellow; margin-top:75px;">Would you be my Friend?</h1>
+<h2 class="title" style="color:gold; margin-top:75px; margin-bottom:20px;">Insert Biodata</h2>
+<form id="form-insert" action="javascript:void(0);" method="POST" onsubmit="app.Add()" > 
+  <a style="color:white; font-family: sans-serif;">Gender :</a><span class="tab"></span><input type="text" id="nim" placeholder="Gender" style="background-color:#10203C;"><span class="tab"></span>
+  <a style="color:white; font-family: sans-serif;">Name :</a><span class="tab"></span><input type="text" id="nama" placeholder="Name" style="background-color:#10203C"><span class="tab"></span>
+  <a style="color:white; font-family: sans-serif;">Address :</a><span class="tab"></span><input type="text" id="alamat" placeholder="Address" style="background-color:#10203C"><span class="tab"></span>
+ <input type="submit" value="Submit" class="button"><span class="tab"></span>
+ <input type="reset" value="Reset" class="button">
+</form>
+<br/>
+<br/>
+
+<h2 class="title" style="color:gold">Friend List</h2><p id="counter" style="color:red; font-weight: bold;"></p>
+
+
+<table id="customers">
+  <tr>
+    <th width="25%" style="align:center">Gender</th>
+    <th width="25%" style="align:center">Name</th>
+    <th width="25%" style="align:center">Address</th>
+    <th width="20%" style="align:center;">Settings</th>
+  </tr>
+    <tbody id="mhs">
+    </tbody>
+</table>
+</div>
+</article>
+
+
+
+
+<div id="modalEdit" class="modal">
+  <div class="modal-content">
+    <span class="closeForm close-btn">&times;</span>
+    <h1 class="title">Edit</h1>
+  <form action="javascript:void(0);" method="POST" id="saveEdit">
+    <input type="hidden" id="edit-id">
+    <table width="100%" >
+      <tr>        
+      <td>Gender</td>
+      <td><input type="text" id="edit-nim" readonly="readonly" class="readonly"></td>
+      </tr>
+      <tr>        
+      <td>Name</td>
+      <td><input type="text" id="edit-nama"></td>
+      </tr>
+      <tr>        
+      <td>Address</td>
+      <td><input type="text" id="edit-alamat"></td>
+      </tr>
+    </table>
+    
+    <br/>
+    <input type="submit" value="Submit" onclick="app.Update()" class="button"/>
+  </form>
+  </div>
+
+</div>
+
+<div id="modalAddSuccess" class="modal">
+  <div class="modal-content1">
+    <span class="closeAddSuccess close-btn">&times;</span>
+	  <div class="headerAll1" ><b>Added</b></div>
+    <p style="margin-left: 15px; font-family: Times New Roman;">New Data added.</p>
+  </div>
+</div>
+
+<div id="modalUpdateSuccess" class="modal">
+  <div class="modal-content2">
+    <span class="closeUpdateSuccess close-btn">&times;</span>
+	  <div class="headerAll2"><b> Updated</b></div>
+    <p style="margin-left: 15px;font-family: Times New Roman;">Data succesfully updated.</p>
+  </div>
+</div>
+
+<div id="modalDeleteSuccess" class="modal">
+  <div class="modal-content3">
+    <span class="closeDeleteSuccess close-btn">&times;</span>
+	<div class="headerAll3"><b>Deleted</b></div>
+    <p style="margin-left: 15px;font-family: Times New Roman;">Data successfully deleted.</p>
+  </div>
+</div>
+  <div id="modalAddFailed" class="modal">
+  <div class="modal-content4">
+    <span class="closeAddFailed close-btn">&times;</span>
+	<div class="headerAll4"><b>Warning!</b></div>
+    <p style="margin-left: 15px; font-family: Times New Roman;">Cannot insert data.</p>
+  </div>
+</div>
+  </div>
+	
+	<footer><a style="color:gold;">MY FRIEND </a>
+		<span class="tab1"></span>
+		<a>BIODATA</a>
+		<span class="tab1"></span>
+		<a>||</a>
+		<span class="tab1"></span>
+		<a id="greeting"></a>
+	</footer>
+
+</body>
+</html>
+<script type="text/javascript" src="script.js"></script>
